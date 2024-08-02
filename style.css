@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primary: #0A3871;
+    --color-secondary: #D8DFE8;
+    --color-text: #495057;
+    --color-background: #E5E5E5;
+    --color-white: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+header {
+    padding: 1rem;
+    
+}
+
+.logo_a {
+    max-width: 10rem;
+    margin-left: 5rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 1rem 5rem;
+    gap: 0.5rem; /* Ajuste para espacio entre elementos */
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    height: 100%;
+    padding-left: 5%;
+    
+}
+
+.texto_capturado{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0.25rem;
+    border: transparent;
+    background-color: transparent;
+    height: 10%;
+    outline: none;
+    text-align:start;
+}
+.texto_del_encriptador {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0.25rem;
+    border: transparent;
+    background-color: transparent;
+    height: 50%;
+    outline: none;
+    margin-bottom: 15rem; /* Ajuste para espacio entre el input y el mensaje_ads */
+    text-align:start;
+    
+    
+}
+
+
+.mensaje_ads {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--color-text);
+    gap: 0.5rem;
+    margin-top: 2rem; /* Ajuste para mover hacia abajo */
+    
+}
+.tooltip {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color:var(--color-white);
+    color: var(--color-primary);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    z-index: 1;
+    top: -5rem; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el tooltip */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-size: 1rem;
+   
+}
+
+.signo_exclamacion:hover + .tooltip {
+    display: block; /* Muestra el tooltip al pasar el ratón */
+    cursor: pointer;
+}
+
+
+
+
+.signo_exclamacion {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-text);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1rem;
+    cursor: not-allowed;
+}
+
+.botones_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    margin-top: 1rem; /* Espacio entre el input y los botones */
+    margin-bottom: 50px; /* Separación con el footer */
+}
+
+.boton_copiar,
+.boton_encriptar,
+.boton_desencriptar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 20rem;
+    height: 4rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton_encriptar:hover,
+.boton_desencriptar:hover,
+.boton_copiar:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.container_right {
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    height: auto;
+}
+
+.imagen_muñeco {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.text_vacio_container1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.text_vacio_container2 {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.boton_copiar {
+    margin-top: 12rem; /* Ajuste para mover el botón copiar hacia abajo */
+}
+
+.created_by_du {
+    background-color: rgba(232, 231, 210, 0.57);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.created_by_du:hover {
+    background-color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_right{
+        height: auto;
+
+  
+
+    }
+    .contenedor {
+        width: 90%;
+        margin: 1rem;
+        height: auto; /* Asegura que el contenedor no se extienda innecesariamente */
+    }
+
+    .mensaje_ads {
+        margin-top: 1rem;
+    }
+    .boton_copiar,
+    .botones_container {
+        margin-top: 1rem; /* Ajustado para pantallas más pequeñas */
+        margin-bottom: 50px; /* Mantiene la separación con el footer */
+    }
+
+    .imagen_muñeco {
+        display: none;
+    }
+
+    .container_right {
+        width: 100%;
+        max-width: 30rem;
+    }
+    .signo_exclamacion:hover + .tooltip{
+
+        margin-left: 25%;
+    }
+
+
+}
+
+@media (max-width: 390px) {
+    .botones_container {
+        gap: 1rem;
+    }
+
+
+}

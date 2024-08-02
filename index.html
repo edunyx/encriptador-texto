@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo_a" src="./img/Logo.png" alt="Logo de la aplicación">
+    </header>
+    <main>
+        <div class="contenedor">
+            <input type="text" class="texto_del_encriptador" id = "texto" placeholder="Ingrese el texto aquí" aria-label="Área de texto para encriptar o desencriptar">
+            <div class="mensaje_ads">
+                <span class="signo_exclamacion" aria-hidden="true">!</span>
+                <div class="tooltip">
+                    <ol>
+                        <li>No se aceptan Mayusculas BLOQ. Mayús.</li>
+                        <li>Sin acentos ni caracteres especiales. (✼,↣,€,-,+,~,etc)</li>
+                    </ol>
+                </div>
+                <p class="texto_mensaje_ads">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones_container">
+                <button onclick="encriptar();" class="boton_encriptar" aria-label="Encriptar texto" >Encriptar</button>
+                <button class="boton_desencriptar" aria-label="Desencriptar texto">Desencriptar</button>
+            </div>
+        </div>
+        <div class="container_right">
+            <input type="text" class="texto_capturado" id = "texto2" >
+            <img id="img" class="imagen_muñeco" src="./img/Muñeco.png" alt="Muñeco ilustrativo">
+            <h2 id="txt1" class="text_vacio_container1">Ningún mensaje fue encontrado</h2>
+            <p id="txt2" class="text_vacio_container2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button onclick="copiar();" id="copiar" class="boton_copiar">Copiar</button>
+        </div>
+
+      
+        
+    </main>
+    <footer class="created_by_du">
+        © 2024 Desarrollado por Eduardo. Todos los derechos reservados. Uso libre permitido
+    </footer>
+    <script src="encrypter.js" defer></script>
+</body>
+</html>
