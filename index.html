@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <p id="resultado"></p>
     <header>
         <img class="logo_a" src="./img/Logo.png" alt="Logo de la aplicación">
     </header>
     <main>
         <div class="contenedor">
-            <textarea class="texto_del_encriptador" id="texto" placeholder="Ingrese el texto aquí" aria-label="Área de texto para encriptar o desencriptar"  rows="12"></textarea>
+            <textarea class="texto_del_encriptador" id="texto" placeholder="Ingrese el texto aquí" aria-label="Área de texto para encriptar o desencriptar" rows="12"></textarea>
             <div class="mensaje_ads">
                 <span class="signo_exclamacion" aria-hidden="true">!</span>
                 <div class="tooltip">
@@ -28,12 +29,15 @@
                 <button onclick="desencriptar();" class="boton_desencriptar" aria-label="Desencriptar texto">Desencriptar</button>
             </div>
         </div>
+       
         <div class="container_right">
-            <textarea class="texto_capturado" id="texto2" placeholder="" rows="1"></textarea>
+            <textarea class="texto_capturado" id="texto2" placeholder="" rows="15"></textarea>
             <img id="img" class="imagen_muñeco" src="./img/Muñeco.png" alt="Muñeco ilustrativo">
             <h2 id="txt1" class="text_vacio_container1">Ningún mensaje fue encontrado</h2>
             <p id="txt2" class="text_vacio_container2">Ingresa el texto que desees encriptar o desencriptar.</p>
-            <button onclick="copiar();" id="copiar" class="boton_copiar">Copiar</button>
+            <div class="botones_container"> <!-- Contenedor para el botón Copiar -->
+                <button onclick="copiar();" id="copiar" class="boton_copiar">Copiar</button>
+            </div>
         </div>
     </main>
     <footer class="created_by_du">
